@@ -81,6 +81,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Convertidor\ConvertidorTipo.cs" />
     <Compile Include="VistasModelo\VentanaInformacionVM.cs" />
     <Compile Include="Vistas\VentanaInformacion.xaml.cs">
       <DependentUpon>VentanaInformacion.xaml</DependentUpon>

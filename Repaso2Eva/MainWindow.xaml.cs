@@ -28,12 +28,5 @@ namespace Repaso2Eva
             InitializeComponent();
             this.DataContext = vm;
         }
-
-
-        public void ListadoComponentes()
-        {
-            vm.ListadoComponentes();
-            
-        }
     }
 }

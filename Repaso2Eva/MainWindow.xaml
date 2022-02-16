@@ -6,18 +6,37 @@
         xmlns:local="clr-namespace:Repaso2Eva"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:ConvertidorTipo x:Key="Convertidor"></local:ConvertidorTipo>
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Command="{Binding Path=Consultar}"
+                    Key="C"
+                    Modifiers="Ctrl"></KeyBinding>
+    </Window.InputBindings>
+
     <DockPanel>
-        <WrapPanel>
-            <ListBox ItemsSource="{Binding Path=ListadoComponentes}">
+        <WrapPanel DockPanel.Dock="Left">
+            <ListBox ItemsSource="{Binding Path=Lista}" SelectedItem="PlatoSeleccionado" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                     ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
                             <TextBlock Text="{Binding Path=Nombre}"></TextBlock>
-                            
+                            <Image Width="200" Height="200" Source="{Binding Path=Tipo,Converter={StaticResource Convertidor}}"></Image>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
         </WrapPanel>
+        <Button Command="{Binding Path=Consultar}"></Button>
+
+        <UserControl></UserControl>
+
+        <StackPanel DockPanel.Dock="Right">
+            <TextBlock Text="{Binding Path=PlatoSeleccionado.Nombre}"></TextBlock>
+            <Image Height="500" Width="500" Source="{Binding Path=PlatoSellecionado.Foto}"/>
+            <TextBlock Text="{Binding Path=PlatoSeleccionado.Precio}"></TextBlock>
+        </StackPanel>
     </DockPanel>
 </Window>

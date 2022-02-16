@@ -1,4 +1,5 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Microsoft.Toolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,10 +18,24 @@ namespace Repaso2Eva
             get { return lista; }
             set { SetProperty(ref lista, value); }
         }
+        private Componente componenteSeleccionado;
 
-
-        public void ListadoComponentes()
+        public Componente ComponenteSeleccionado
         {
+            get { return componenteSeleccionado;}
+
+            set { SetProperty(ref componenteSeleccionado, value); }
+        }
+
+
+
+        public RelayCommand Consultar { get; }
+
+
+        public MainWindowVM()
+        {
+
+            Consultar = new RelayCommand();
             lista = Componente.GetSamples();
         }
     }

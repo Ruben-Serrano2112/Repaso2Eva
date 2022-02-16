@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repaso2Eva.VistasModelo
+namespace Repaso2Eva.Vistas
 {
     class VentanaInformacionVM:ObservableObject
     {
