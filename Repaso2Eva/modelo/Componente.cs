@@ -23,6 +23,10 @@ class Componente:ObservableObject
         this.precio = precio;
     }
 
+    public Componente()
+    {
+    }
+
     public static ObservableCollection<Componente> GetSamples()
     {
         var lista = new ObservableCollection<Componente>();

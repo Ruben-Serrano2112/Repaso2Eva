@@ -9,6 +9,6 @@ namespace Repaso2Eva.VistasModelo
 {
     class VentanaInformacionVM:ObservableObject
     {
-
+        
     }
 }

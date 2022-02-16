@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:Repaso2Eva"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <WrapPanel>
+            <ListBox ItemsSource="{Binding Path=ListadoComponentes}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Path=Nombre}"></TextBlock>
+                            
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </WrapPanel>
+    </DockPanel>
 </Window>

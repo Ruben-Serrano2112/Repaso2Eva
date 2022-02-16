@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Repaso2Eva.VistasModelo;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,11 +18,14 @@ namespace Repaso2Eva.Vistas
 {
     public partial class VentanaInformacion : Window
     {
-        VentanaInformacion vm = new VentanaInformacion();
+        VentanaInformacionVM vm = new VentanaInformacionVM();
+        
         public VentanaInformacion()
         {
             InitializeComponent();
             this.DataContext = vm;
         }
+
+
     }
 }

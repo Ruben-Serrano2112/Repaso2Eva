@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,10 +22,18 @@ namespace Repaso2Eva
     public partial class MainWindow : Window
     {
         MainWindowVM vm = new MainWindowVM();
+
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = vm;
+        }
+
+
+        public void ListadoComponentes()
+        {
+            vm.ListadoComponentes();
+            
         }
     }
 }

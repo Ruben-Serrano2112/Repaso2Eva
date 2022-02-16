@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Repaso2Eva.Vistas"
         mc:Ignorable="d"
-        Title="VentanaInformacion" Height="450" Width="800" Icon="Imagenes/128.ico">
+        Title="VentanaInformacion" Height="450" Width="800" Icon="/Imagenes/128.ico">
     <Grid>
         
     </Grid>
